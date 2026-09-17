@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -5,25 +6,24 @@ import Courses from "./components/Courses";
 import Benefits from "./components/Benefits";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
+import Faq from "./components/Faq";
 import Footer from "./components/Footer";
 
-function App() {
+export default function App() {
+  const [language, setLanguage] = useState("");
   return (
     <>
       <Header />
-
-      <main>
+      <main id="conteudo" tabIndex={-1}>
         <Hero />
+        <Courses onSelectCourse={setLanguage} />
         <About />
-        <Courses />
         <Benefits />
         <Testimonials />
-        <Contact />
+        <Contact language={language} onLanguageChange={setLanguage} />
+        <Faq />
       </main>
-
       <Footer />
     </>
   );
 }
-
-export default App;
