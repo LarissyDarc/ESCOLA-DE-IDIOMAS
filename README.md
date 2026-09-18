@@ -32,3 +32,15 @@ The app will be available at `http://localhost:5173` (or another port if 5173 is
 - Small accessibility improvements in `src/components/Header.jsx` (`aria-expanded`, `aria-controls`, role and labels).
 
 See `CHANGELOG.md` for a concise history of edits made during this session.
+
+## GitHub Pages
+
+Site: https://larissydarc.github.io/ESCOLA-DE-IDIOMAS/
+
+O workflow em .github/workflows/pages.yml instala as dependências, executa lint e build e publica a pasta dist. Novos pushes em feat/redesign-vivalingua ou main acionam a publicação.
+
+A versão do redesign está na branch feat/redesign-vivalingua. Depois da integração em main, remova a branch de desenvolvimento dos gatilhos de publicação e das permissões do ambiente github-pages.
+
+O Vite usa a base /ESCOLA-DE-IDIOMAS/. Para desenvolvimento local, acesse http://localhost:5173/ESCOLA-DE-IDIOMAS/.
+
+O formulário prepara uma mensagem no aplicativo de e-mail do visitante; não há serviço de envio no servidor.
