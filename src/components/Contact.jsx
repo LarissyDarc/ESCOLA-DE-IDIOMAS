@@ -1,11 +1,24 @@
 import { useState } from "react";
+import { validarNome } from "../js/validacao.js";
 
 export default function Contact({ language, onLanguageChange }) {
   const [prepared, setPrepared] = useState(false);
 
   function handleSubmit(event) {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const nameInput = form.elements.namedItem("name");
+    const nameError = validarNome(nameInput.value);
+
+    if (nameError) {
+      nameInput.setCustomValidity(nameError);
+      nameInput.reportValidity();
+      return;
+    }
+
+    nameInput.setCustomValidity("");
+    nameInput.value = nameInput.value.trim();
+    const data = new FormData(form);
     const body = [
       "Olá! Tenho interesse em uma aula experimental na VivaLíngua.",
       "",
@@ -32,7 +45,7 @@ export default function Contact({ language, onLanguageChange }) {
         </div>
         <form className="contact-form" onSubmit={handleSubmit} onChange={() => setPrepared(false)}>
           <span className="section-label">QUE BOM TER VOCÊ AQUI</span><h3>Vamos conversar?</h3><p className="form-intro">Preencha seus dados para solicitar uma aula experimental por e-mail.</p>
-          <div className="form-group"><label htmlFor="name">Seu nome</label><input id="name" name="name" autoComplete="name" placeholder="Como podemos chamar você?" required maxLength={100} /></div>
+          <div className="form-group"><label htmlFor="name">Seu nome</label><input id="name" name="name" autoComplete="name" placeholder="Como podemos chamar você?" onInput={(event) => event.currentTarget.setCustomValidity("")} required maxLength={100} /></div>
           <div className="form-group"><label htmlFor="email">E-mail</label><input id="email" type="email" name="email" autoComplete="email" placeholder="voce@exemplo.com" required maxLength={200} /></div>
           <div className="form-row">
             <div className="form-group"><label htmlFor="language">Quero aprender</label><select id="language" name="language" value={language} onChange={(event) => onLanguageChange(event.target.value)} required><option value="">Escolha o idioma</option>{["Inglês", "Espanhol", "Francês", "Italiano", "Alemão", "Inglês para Negócios"].map((item) => <option key={item}>{item}</option>)}</select></div>
