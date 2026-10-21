@@ -1,34 +1,47 @@
-# React + Vite
+# ⚛️ Projeto React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Modelo inicial de aplicação React com Vite, configuração de HMR e regras de qualidade de código com Oxlint.
 
-Currently, two official plugins are available:
+## 🎓 Identificação Acadêmica
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Instituição:** Senac Taguatinga
+- **Curso:** Técnico de Desenvolvimento de Sistema
+- **Disciplina:** Projeto Entregador
+- **Orientador:** Profº Hudson Neves
 
-## React Compiler
+## 🛠️ Tecnologias
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- JavaScript
+- CSS
+- Oxlint
 
-## Expanding the Oxlint configuration
+## 🚀 Plugins React
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+O projeto pode utilizar uma das seguintes opções oficiais:
 
-## Running this project (local)
+- `@vitejs/plugin-react` — utiliza Oxc.
+- `@vitejs/plugin-react-swc` — utiliza SWC.
 
-To start the development server:
+## ▶️ Como Executar
+
+Requisito: Node.js instalado.
 
 ```bash
 npm install
 npm run dev
 ```
 
-The app will be available at `http://localhost:5173` (or another port if 5173 is taken).
+Acesse `http://localhost:5173` no navegador.
 
-## Recent local changes
+## 📝 Alterações Recentes
 
-- Fixed incorrect CSS import in `src/main.jsx` (now imports `src/index.css`).
-- Small accessibility improvements in `src/components/Header.jsx` (`aria-expanded`, `aria-controls`, role and labels).
+- Corrigida a importação de CSS em `src/main.jsx`, utilizando `src/index.css`.
+- Melhorada a acessibilidade do cabeçalho em `src/components/Header.jsx`, com atributos ARIA e rótulos.
 
-See `CHANGELOG.md` for a concise history of edits made during this session.
+Consulte o arquivo `CHANGELOG.md` para ver o histórico de alterações.
+
+## 📈 Status
+
+**Em desenvolvimento — projeto acadêmico.**
