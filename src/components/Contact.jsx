@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { validarCadastro } from "../js/validacao.js";
 
 function Contact() {
   const [form, setForm] = useState({
@@ -9,10 +10,12 @@ function Contact() {
   });
 
   const [success, setSuccess] = useState(false);
+  const [validationMessage, setValidationMessage] = useState("");
 
   function handleChange(event) {
     const { name, value } = event.target;
 
+    setValidationMessage("");
     setForm({
       ...form,
       [name]: value,
@@ -21,6 +24,15 @@ function Contact() {
 
   function handleSubmit(event) {
     event.preventDefault();
+
+    const validationError = validarCadastro(form.name, form.email, form.language);
+    if (validationError) {
+      setValidationMessage(validationError);
+      setSuccess(false);
+      return;
+    }
+
+    setValidationMessage("");
 
     setSuccess(true);
 
@@ -142,6 +154,12 @@ function Contact() {
           <button type="submit" className="btn btn-primary form-button">
             Enviar mensagem
           </button>
+
+          {validationMessage && (
+            <p className="error-message" role="alert">
+              {validationMessage}
+            </p>
+          )}
 
           {success && (
             <p className="success-message">

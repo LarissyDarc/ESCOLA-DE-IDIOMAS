@@ -624,6 +624,13 @@ select {
   font-weight: 600;
 }
 
+.error-message {
+  margin-top: 15px;
+  color: #b42318;
+  text-align: center;
+  font-weight: 600;
+}
+
 /* FOOTER */
 
 .footer {
