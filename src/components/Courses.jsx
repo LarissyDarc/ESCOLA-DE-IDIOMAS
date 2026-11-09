@@ -1,45 +1,45 @@
 const courses = [
   {
-    flag: "🇺🇸",
-    name: "Inglês",
+    flag: "💼",
+    name: "Inglês Executivo",
     description:
-      "Do nível básico ao avançado, desenvolvendo conversação e compreensão.",
-    level: "Básico ao avançado",
+      "A estrutura ideal para líderes e profissionais que precisam falar com clareza, presença e autoridade em reuniões, apresentações e negociações.",
+    level: "Executivos e gestores",
+  },
+  {
+    flag: "🌍",
+    name: "Inglês para Internacionalização",
+    description:
+      "Desenvolvimento de comunicação estratégica para quem atua com clientes, parceiros e equipes em contexto global e multinacional.",
+    level: "Intermediário ao avançado",
+  },
+  {
+    flag: "🤝",
+    name: "Inglês para Negócios",
+    description:
+      "Treinamento voltado para entrevistas, networking, pitches, gestão de relacionamento e presença premium em ambientes corporativos.",
+    level: "Gestão e liderança",
   },
   {
     flag: "🇪🇸",
-    name: "Espanhol",
+    name: "Espanhol para Atuação Global",
     description:
-      "Aprenda espanhol de forma prática para estudos, viagens e trabalho.",
-    level: "Básico ao avançado",
+      "Uma comunicação mais fluida e segura para negócios, viagens, expansão internacional e relacionamento com mercados latinos.",
+    level: "Profissionais e líderes",
   },
   {
     flag: "🇫🇷",
-    name: "Francês",
+    name: "Francês para Contexto Corporativo",
     description:
-      "Explore a língua francesa com aulas dinâmicas e foco em comunicação.",
-    level: "Básico ao intermediário",
+      "Comunicação sofisticada para profissionais que atuam com clientes, parceiros e equipes em ambientes internacionais de alto nível.",
+    level: "Executivos e equipes",
   },
   {
-    flag: "🇮🇹",
-    name: "Italiano",
+    flag: "🌐",
+    name: "Diagnóstico Executivo",
     description:
-      "Conheça o idioma e a cultura italiana com uma metodologia moderna.",
-    level: "Básico ao intermediário",
-  },
-  {
-    flag: "🇩🇪",
-    name: "Alemão",
-    description:
-      "Aprenda estruturas, vocabulário e conversação de maneira progressiva.",
-    level: "Básico ao intermediário",
-  },
-  {
-    flag: "💼",
-    name: "Inglês para Negócios",
-    description:
-      "Comunicação profissional para reuniões, entrevistas e apresentações.",
-    level: "Intermediário ao avançado",
+      "Avaliação estratégica para identificar o idioma, o nível ideal e o caminho mais eficiente para acelerar sua presença internacional.",
+    level: "Diagnóstico personalizado",
   },
 ];
 
@@ -48,28 +48,32 @@ function Courses() {
     <section className="section courses" id="cursos">
       <div className="container">
         <div className="section-header">
-          <span className="section-label">Nossos cursos</span>
+          <span className="section-label">Programas executivos</span>
 
-          <h2>Escolha o idioma que vai transformar seu futuro</h2>
+          <h2>Programas de idioma para quem deseja liderar com presença internacional.</h2>
 
           <p>
-            Cursos desenvolvidos para diferentes objetivos e níveis de
-            conhecimento.
+            Soluções premium pensadas para executivos, gestores e profissionais que precisam ganhar
+            confiança, clareza e influência em ambientes globais.
           </p>
         </div>
 
         <div className="course-grid">
-          {courses.map((course) => (
-            <article className="course-card" key={course.name}>
-              <div className="course-icon">{course.flag}</div>
+          {courses.map((course, index) => (
+            <article
+              className="course-card reveal-card"
+              key={course.name}
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <div className="course-top">
+                <span className="course-flag">{course.flag}</span>
+                <span className="course-level">{course.level}</span>
+              </div>
 
               <h3>{course.name}</h3>
-
               <p>{course.description}</p>
 
-              <span className="course-level">{course.level}</span>
-
-              <a href="#contato">Quero aprender →</a>
+              <a href="#contato">Quero esse programa →</a>
             </article>
           ))}
         </div>

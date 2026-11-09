@@ -1,27 +1,27 @@
 const benefits = [
   {
     icon: "🗣️",
-    title: "Conversação desde o início",
+    title: "Comunicação executiva",
     description:
-      "Pratique situações reais e desenvolva confiança para falar.",
+      "Treinamento focado em reuniões, apresentações, pitchs, negociações e presença profissional em contextos internacionais.",
   },
   {
     icon: "👩‍🏫",
-    title: "Professores qualificados",
+    title: "Mentoria estratégica",
     description:
-      "Profissionais preparados para acompanhar sua evolução.",
+      "Orientação personalizada para quem precisa evoluir com clareza, velocidade e impacto em decisões e relacionamentos globais.",
   },
   {
-    icon: "💻",
-    title: "Aulas presenciais e online",
+    icon: "💼",
+    title: "Resultados reais",
     description:
-      "Escolha a modalidade que melhor combina com sua rotina.",
+      "Estrutura pensada para transformar sua comunicação no trabalho, na carreira e nas oportunidades de crescimento internacional.",
   },
   {
     icon: "📚",
-    title: "Material moderno",
+    title: "Currículo premium",
     description:
-      "Conteúdos atualizados para tornar seu aprendizado mais interessante.",
+      "Conteúdo aplicado ao seu contexto real: negócios, negociação, liderança, viagens e comunicação profissional de alto nível.",
   },
 ];
 
@@ -30,14 +30,18 @@ function Benefits() {
     <section className="section benefits" id="beneficios">
       <div className="container">
         <div className="section-header">
-          <span className="section-label">Por que escolher a VivaLíngua?</span>
+          <span className="section-label">Impacto executivo</span>
 
-          <h2>Aprender pode ser simples e divertido.</h2>
+          <h2>Um programa de idiomas pensado para quem precisa liderar com clareza, presença e impacto global.</h2>
         </div>
 
         <div className="benefits-grid">
-          {benefits.map((benefit) => (
-            <article className="benefit-card" key={benefit.title}>
+          {benefits.map((benefit, index) => (
+            <article
+              className="benefit-card reveal-card"
+              key={benefit.title}
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
               <div className="benefit-icon">{benefit.icon}</div>
 
               <h3>{benefit.title}</h3>

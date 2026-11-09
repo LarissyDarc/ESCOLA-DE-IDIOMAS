@@ -10,8 +10,10 @@ function Header() {
   return (
     <header className="header">
       <div className="container header-content">
-        <a href="#inicio" className="logo" aria-label="VivaLíngua - Início">
-          Viva<span>Língua</span>
+        <a href="#inicio" className="logo" aria-label="VivaLíngua Pro - Início">
+          <span className="brand-primary">Viva</span>
+          <span className="brand-accent">Língua</span>
+          <span className="logo-pro">Pro</span>
         </a>
 
         <button
@@ -33,20 +35,24 @@ function Header() {
             Sobre
           </a>
 
+          <a href="#metodologia" onClick={closeMenu}>
+            Metodologia
+          </a>
+
           <a href="#cursos" onClick={closeMenu}>
             Cursos
           </a>
 
           <a href="#beneficios" onClick={closeMenu}>
-            Benefícios
+            Resultados
           </a>
 
           <a href="#depoimentos" onClick={closeMenu}>
-            Depoimentos
+            Avaliações
           </a>
 
-          <a href="#contato" className="nav-button" onClick={closeMenu}>
-            Contato
+          <a href="#diagnostico" className="nav-button" onClick={closeMenu}>
+            Agendar diagnóstico
           </a>
         </nav>
       </div>

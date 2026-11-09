@@ -1,0 +1,41 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg1" x1="140" y1="70" x2="970" y2="1280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1B2A"/>
+      <stop offset="0.55" stop-color="#163A5F"/>
+      <stop offset="1" stop-color="#1A6FBF"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F5D77F"/>
+      <stop offset="1" stop-color="#D4AF37"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg1)"/>
+  <circle cx="940" cy="180" r="220" fill="#D4AF37" fill-opacity="0.12"/>
+  <circle cx="190" cy="1100" r="260" fill="#7EC8FF" fill-opacity="0.12"/>
+  <rect x="80" y="90" width="200" height="56" rx="28" fill="#F5D77F" fill-opacity="0.18"/>
+  <text x="180" y="128" fill="#F5D77F" font-size="26" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700">VIVA LÍNGUA PRO</text>
+
+  <text x="80" y="310" fill="white" font-size="98" font-weight="800" font-family="Arial, sans-serif">Fale</text>
+  <text x="80" y="420" fill="#F5D77F" font-size="98" font-weight="800" font-family="Arial, sans-serif">com</text>
+  <text x="80" y="530" fill="white" font-size="98" font-weight="800" font-family="Arial, sans-serif">confiança</text>
+  <text x="80" y="590" fill="#D7E7FF" font-size="34" font-family="Arial, sans-serif">para carreira, reuniões e oportunidades globais.</text>
+
+  <rect x="80" y="660" width="420" height="82" rx="41" fill="url(#gold)"/>
+  <text x="290" y="713" text-anchor="middle" fill="#0D1B2A" font-size="33" font-weight="700" font-family="Arial, sans-serif">Diagnóstico grátis</text>
+
+  <g>
+    <rect x="80" y="805" width="260" height="150" rx="26" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="110" y="860" fill="#F5D77F" font-size="24" font-weight="700" font-family="Arial, sans-serif">+1.500</text>
+    <text x="110" y="900" fill="#E8F1FF" font-size="22" font-family="Arial, sans-serif">alunos atendidos</text>
+  </g>
+
+  <g>
+    <rect x="370" y="805" width="260" height="150" rx="26" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="400" y="860" fill="#F5D77F" font-size="24" font-weight="700" font-family="Arial, sans-serif">5</text>
+    <text x="400" y="900" fill="#E8F1FF" font-size="22" font-family="Arial, sans-serif">idiomas</text>
+  </g>
+
+  <text x="80" y="1125" fill="#E8F1FF" font-size="28" font-weight="700" font-family="Arial, sans-serif">Executivos • formação • resultados reais</text>
+  <text x="80" y="1175" fill="#C7D9F5" font-size="24" font-family="Arial, sans-serif">#inglês #carreira #fluência #vivalingua</text>
+</svg>
