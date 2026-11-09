@@ -1255,10 +1255,13 @@ select {
 
   .nav a {
     padding: 7px 0;
+    color: var(--accent-strong);
+    font-weight: 700;
   }
 
   .nav .nav-button {
     text-align: center;
+    color: #171c20;
   }
 
   .hero-content,
