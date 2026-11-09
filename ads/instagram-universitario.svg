@@ -1,0 +1,41 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="114" y1="60" x2="950" y2="1290" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08192A"/>
+      <stop offset="0.45" stop-color="#123F6A"/>
+      <stop offset="1" stop-color="#1B7C8D"/>
+    </linearGradient>
+    <linearGradient id="gold2" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F8E3A3"/>
+      <stop offset="1" stop-color="#D9B14C"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg2)"/>
+  <circle cx="220" cy="1010" r="300" fill="#EEF9FF" fill-opacity="0.08"/>
+  <circle cx="900" cy="220" r="250" fill="#D9B14C" fill-opacity="0.12"/>
+  <rect x="80" y="90" width="220" height="56" rx="28" fill="#F8E3A3" fill-opacity="0.18"/>
+  <text x="190" y="128" fill="#F8E3A3" font-size="26" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700">VIVA LÍNGUA PRO</text>
+
+  <text x="80" y="310" fill="white" font-size="92" font-weight="800" font-family="Arial, sans-serif">Sua</text>
+  <text x="80" y="420" fill="#D9F6FF" font-size="92" font-weight="800" font-family="Arial, sans-serif">próxima</text>
+  <text x="80" y="530" fill="#F8E3A3" font-size="92" font-weight="800" font-family="Arial, sans-serif">oportunidade</text>
+  <text x="80" y="590" fill="#D9F6FF" font-size="34" font-family="Arial, sans-serif">pode começar com uma conversa em outro idioma.</text>
+
+  <rect x="80" y="660" width="420" height="82" rx="41" fill="url(#gold2)"/>
+  <text x="290" y="713" text-anchor="middle" fill="#0A1D2F" font-size="33" font-weight="700" font-family="Arial, sans-serif">Diagnóstico grátis</text>
+
+  <g>
+    <rect x="80" y="805" width="260" height="150" rx="26" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="110" y="860" fill="#F8E3A3" font-size="24" font-weight="700" font-family="Arial, sans-serif">Estudos</text>
+    <text x="110" y="900" fill="#EAF8FF" font-size="22" font-family="Arial, sans-serif">intercâmbio e carreira</text>
+  </g>
+
+  <g>
+    <rect x="370" y="805" width="260" height="150" rx="26" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="400" y="860" fill="#F8E3A3" font-size="24" font-weight="700" font-family="Arial, sans-serif">Aulas</text>
+    <text x="400" y="900" fill="#EAF8FF" font-size="22" font-family="Arial, sans-serif">práticas e personalizadas</text>
+  </g>
+
+  <text x="80" y="1125" fill="#EAF8FF" font-size="28" font-weight="700" font-family="Arial, sans-serif">Universitários • intercâmbio • futuro global</text>
+  <text x="80" y="1175" fill="#CCEEF7" font-size="24" font-family="Arial, sans-serif">#ingles #intercambio #universidade #vivalingua</text>
+</svg>

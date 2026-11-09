@@ -1,0 +1,41 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="180" y1="80" x2="930" y2="1260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A2536"/>
+      <stop offset="0.45" stop-color="#1A4B67"/>
+      <stop offset="1" stop-color="#0F7A73"/>
+    </linearGradient>
+    <linearGradient id="gold3" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F7E7A6"/>
+      <stop offset="1" stop-color="#E0B949"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg3)"/>
+  <circle cx="900" cy="200" r="260" fill="#F7E7A6" fill-opacity="0.12"/>
+  <circle cx="200" cy="1100" r="300" fill="#9EE5D6" fill-opacity="0.1"/>
+  <rect x="80" y="90" width="210" height="56" rx="28" fill="#F7E7A6" fill-opacity="0.18"/>
+  <text x="185" y="128" fill="#F7E7A6" font-size="26" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700">VIVA LÍNGUA PRO</text>
+
+  <text x="80" y="300" fill="white" font-size="92" font-weight="800" font-family="Arial, sans-serif">Viaje</text>
+  <text x="80" y="410" fill="#DDF8F4" font-size="92" font-weight="800" font-family="Arial, sans-serif">sem</text>
+  <text x="80" y="520" fill="#F7E7A6" font-size="92" font-weight="800" font-family="Arial, sans-serif">barreiras</text>
+  <text x="80" y="590" fill="#D7F1EC" font-size="34" font-family="Arial, sans-serif">aprenda a se comunicar com confiança em qualquer destino.</text>
+
+  <rect x="80" y="660" width="420" height="82" rx="41" fill="url(#gold3)"/>
+  <text x="290" y="713" text-anchor="middle" fill="#0A1D2F" font-size="33" font-weight="700" font-family="Arial, sans-serif">Diagnóstico grátis</text>
+
+  <g>
+    <rect x="80" y="805" width="260" height="150" rx="26" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="110" y="860" fill="#F7E7A6" font-size="24" font-weight="700" font-family="Arial, sans-serif">Viagens</text>
+    <text x="110" y="900" fill="#EAFCF9" font-size="22" font-family="Arial, sans-serif">com autonomia</text>
+  </g>
+
+  <g>
+    <rect x="370" y="805" width="260" height="150" rx="26" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="400" y="860" fill="#F7E7A6" font-size="24" font-weight="700" font-family="Arial, sans-serif">Aulas</text>
+    <text x="400" y="900" fill="#EAFCF9" font-size="22" font-family="Arial, sans-serif">práticas e imersivas</text>
+  </g>
+
+  <text x="80" y="1125" fill="#EAFCF9" font-size="28" font-weight="700" font-family="Arial, sans-serif">Viajantes • cultura • comunicação real</text>
+  <text x="80" y="1175" fill="#CDEEE8" font-size="24" font-family="Arial, sans-serif">#espanhol #ingles #viagem #vivalingua</text>
+</svg>
