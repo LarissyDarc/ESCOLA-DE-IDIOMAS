@@ -20,20 +20,26 @@ const metrics = [
 ];
 
 function PremiumCorporatePage() {
+  function handleGoHome(event) {
+    event.preventDefault();
+    window.location.hash = "inicio";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <div className="premium-corporate-page">
       <header className="premium-corporate-header">
         <div className="container premium-header-inner">
-          <a href="/" className="logo" aria-label="VivaLíngua Pro - Início">
+          <a href="./#inicio" className="logo" aria-label="VivaLíngua Pro - Início" onClick={handleGoHome}>
             Viva<span>Língua</span>
             <span className="logo-pro">Pro</span>
           </a>
 
           <div className="premium-header-actions">
-            <a href="/#diagnostico" className="btn btn-outline btn-small">
+            <a href="./#diagnostico" className="btn btn-outline btn-small">
               Diagnóstico
             </a>
-            <a href="/#inicio" className="btn btn-primary btn-small">
+            <a href="./#inicio" className="btn btn-primary btn-small" onClick={handleGoHome}>
               Voltar ao site
             </a>
           </div>
@@ -54,7 +60,7 @@ function PremiumCorporatePage() {
               </p>
 
               <div className="premium-actions">
-                <a href="/#diagnostico" className="btn btn-primary">
+                <a href="./#diagnostico" className="btn btn-primary">
                   Agendar diagnóstico executivo
                 </a>
                 <a href="#programas" className="btn btn-outline">

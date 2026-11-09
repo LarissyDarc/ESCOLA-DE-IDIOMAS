@@ -54,6 +54,12 @@ function DiagnosticoPage() {
     setForm((prev) => ({ ...prev, [name]: value }));
   }
 
+  function handleGoHome(event) {
+    event.preventDefault();
+    window.location.hash = "inicio";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
 
@@ -89,13 +95,13 @@ function DiagnosticoPage() {
     <div className="diagnostico-page">
       <header className="diagnostico-header">
         <div className="container diagnostico-header-inner">
-          <a href="/" className="logo" aria-label="VivaLíngua Pro - Início">
+          <a href="./#inicio" className="logo" aria-label="VivaLíngua Pro - Início" onClick={handleGoHome}>
             <span className="brand-primary">Viva</span>
             <span className="brand-accent">Língua</span>
             <span className="logo-pro">Pro</span>
           </a>
 
-          <a href="/" className="btn btn-outline btn-small">
+          <a href="./#inicio" className="btn btn-outline btn-small" onClick={handleGoHome}>
             Voltar ao início
           </a>
         </div>

@@ -13,14 +13,25 @@ import PremiumCorporatePage from "./pages/PremiumCorporatePage";
 
 function App() {
   const [route, setRoute] = useState(() => window.location.hash.replace("#", "") || "home");
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
     const handleHashChange = () => {
       setRoute(window.location.hash.replace("#", "") || "home");
     };
 
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 240);
+    };
+
     window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   if (route === "diagnostico") {
@@ -66,6 +77,15 @@ function App() {
 
         <Contact />
       </main>
+
+      <button
+        type="button"
+        className={`scroll-top-button ${showScrollTop ? "visible" : ""}`}
+        aria-label="Voltar ao topo"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        ↑
+      </button>
 
       <div className="floating-cta" aria-label="Chamada para ação final">
         <span>Diagnóstico estratégico</span>

@@ -311,6 +311,12 @@ select {
   font-size: 0.82rem;
   font-weight: 600;
   box-shadow: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-badges span:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(17, 21, 25, 0.06);
 }
 
 .hero-cta-row {
@@ -389,6 +395,51 @@ select {
   border-color: rgba(17, 21, 25, 0.2);
 }
 
+.scroll-top-button {
+  position: fixed;
+  right: 24px;
+  bottom: 90px;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(201, 181, 162, 0.32);
+  border-radius: 50%;
+  background: rgba(17, 24, 32, 0.96);
+  color: #f5efe9;
+  font-size: 1.5rem;
+  line-height: 1;
+  box-shadow: 0 18px 30px rgba(17, 24, 32, 0.24), 0 0 0 1px rgba(201, 181, 162, 0.1);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(18px) scale(0.96);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  z-index: 1100;
+  animation: float-button 2.8s ease-in-out infinite;
+}
+
+.scroll-top-button.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.scroll-top-button:hover {
+  background: rgba(154, 121, 93, 0.96);
+  color: #171a1d;
+  border-color: rgba(233, 216, 194, 0.55);
+  box-shadow: 0 20px 34px rgba(154, 121, 93, 0.2), 0 0 18px rgba(154, 121, 93, 0.22);
+}
+
+@keyframes float-button {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
 .floating-cta {
   position: fixed;
   right: 22px;
@@ -443,6 +494,26 @@ select {
   border: 1px solid rgba(255, 255, 255, 0.06);
   position: relative;
   overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.floating-card {
+  animation: cardFloat 6s ease-in-out infinite;
+}
+
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.hero-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 66px rgba(26, 29, 32, 0.18), 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .hero-card::before {
@@ -463,7 +534,7 @@ select {
 }
 
 .hero-card-main {
-  background: rgba(255, 255, 255, 0.04);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 25px;
   padding: 45px 35px;
@@ -471,6 +542,7 @@ select {
   text-align: center;
   position: relative;
   z-index: 1;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .world {
@@ -737,12 +809,12 @@ select {
 }
 
 .course-card {
-  background: #f8f5f2;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 240, 233, 0.96) 100%);
   padding: 26px 24px 22px;
   border-radius: 24px;
-  border: 1px solid rgba(184, 154, 116, 0.2);
-  transition: 0.3s;
-  box-shadow: none;
+  border: 1px solid rgba(184, 154, 116, 0.16);
+  transition: 0.3s ease;
+  box-shadow: 0 16px 30px rgba(15, 18, 21, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.78);
   position: relative;
   overflow: hidden;
 }
@@ -753,17 +825,30 @@ select {
   inset: 0 auto auto 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.44), transparent 34%, transparent 70%, rgba(182, 155, 129, 0.06));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.56), transparent 32%, transparent 68%, rgba(182, 155, 129, 0.08));
   pointer-events: none;
+}
+
+.course-card::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(169, 130, 92, 0.4), rgba(169, 130, 92, 0.05));
 }
 
 .course-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 26px 44px rgba(15, 18, 21, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 0 0 1px rgba(182, 155, 129, 0.06);
+  border-color: rgba(169, 130, 92, 0.28);
+  box-shadow: 0 30px 52px rgba(15, 18, 21, 0.1), 0 0 0 1px rgba(169, 130, 92, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.92);
 }
 
 .course-card:hover .course-level {
-  background: rgba(182, 155, 129, 0.1);
+  background: rgba(182, 155, 129, 0.12);
+  border-color: rgba(169, 130, 92, 0.2);
 }
 
 .course-top {
@@ -836,6 +921,7 @@ select {
   margin: 0;
   border: 1px solid rgba(23, 28, 32, 0.06);
   line-height: 1.3;
+  transition: background 0.25s ease, border-color 0.25s ease;
 }
 
 .course-card h3 {
@@ -857,9 +943,17 @@ select {
   z-index: 1;
   display: inline-flex;
   align-items: center;
-  color: var(--primary);
+  gap: 8px;
+  color: var(--primary-dark);
   font-weight: 700;
   letter-spacing: -0.01em;
+  text-decoration: none;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.course-card a::after {
+  content: "→";
+  font-size: 1rem;
 }
 
 /* BENEFITS */
@@ -939,11 +1033,23 @@ select {
 }
 
 .testimonial-card {
-  background: linear-gradient(180deg, #ffffff 0%, #f9fbfe 100%);
+  position: relative;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97) 0%, rgba(247, 250, 251, 0.96) 100%);
   padding: 30px;
   border-radius: 22px;
-  box-shadow: 0 22px 38px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(17, 24, 32, 0.03);
+  box-shadow: 0 24px 42px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(17, 24, 32, 0.04);
+}
+
+.testimonial-card::before {
+  content: "“";
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 4rem;
+  line-height: 1;
+  color: rgba(201, 181, 162, 0.22);
+  font-family: Georgia, serif;
 }
 
 .stars {
@@ -955,28 +1061,37 @@ select {
 .testimonial-card > p {
   color: var(--text-light);
   margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
 }
 
 .student {
   display: flex;
   align-items: center;
   gap: 12px;
+  position: relative;
+  z-index: 1;
 }
 
 .avatar {
   width: 48px;
   height: 48px;
-  background: var(--primary);
+  background: linear-gradient(135deg, #1d2228 0%, #4b5863 100%);
   color: white;
   display: grid;
   place-items: center;
   border-radius: 50%;
   font-weight: 700;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
 }
 
 .student div:last-child {
   display: flex;
   flex-direction: column;
+}
+
+.student strong {
+  color: var(--primary-dark);
 }
 
 .student span {

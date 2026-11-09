@@ -7,10 +7,17 @@ function Header() {
     setMenuOpen(false);
   }
 
+  function handleGoHome(event) {
+    event.preventDefault();
+    window.location.hash = "inicio";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    closeMenu();
+  }
+
   return (
     <header className="header">
       <div className="container header-content">
-        <a href="#inicio" className="logo" aria-label="VivaLíngua Pro - Início">
+        <a href="#inicio" className="logo" aria-label="VivaLíngua Pro - Início" onClick={handleGoHome}>
           <span className="brand-primary">Viva</span>
           <span className="brand-accent">Língua</span>
           <span className="logo-pro">Pro</span>
@@ -27,7 +34,7 @@ function Header() {
         </button>
 
         <nav id="main-navigation" className={`nav ${menuOpen ? "nav-open" : ""}`} role="navigation" aria-label="Menu principal">
-          <a href="#inicio" onClick={closeMenu}>
+          <a href="#inicio" onClick={handleGoHome}>
             Início
           </a>
 
